@@ -8,11 +8,6 @@ interface RenderCalendarProps {
     }>>;
 }
 
-interface DateProps {
-    startDate: Date | null;
-    endDate: Date | null;
-}
-
 export const RenderCalendar = ({
     selectedDate, 
     currentMonth,
