@@ -2,37 +2,113 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: center; 
   font-size: calc(10px + 2vmin);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.datePicker {
+  width: 350px;
+  font-size: 16px;
+  
+  /* overflow: hidden; */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.calendarContent {
+  display: flex;
+  flex-direction: column;
+  gap:8px;
+  min-height: 240px;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: white;
 }
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 44px;
+}
+
+.header button {
+  width: 44px;
+  height: 44px;
+  border: none;
+  background-color: white;
+  cursor: pointer;
+}
+
+.header span {
+  font-size: 16px;
+  color: #000000;
+}
+
+.header button:hover {
+  background-color: #e6e6e6;
+}
+
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.day {
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  line-height: 32px;
+  width: 50px;
+}
+
+.day:hover {
+  background-color: #e6e6e6;
+}
+
+.today {
+  background-color: #ffff76;
+}
+
+.selected {
+  background-color: #006edc;
+  color: white;
+}
+
+.nonCurrent {
+  color: #757575;
+  pointer-events: none;
+}
+
+.inRange {
+  background-color: #add8e6;
+}
+
+.displayBoard {
+  display: flex;
+  gap:16px;
+  align-items: center;
+  width: 350px;
+  margin-bottom: 16px;
+}
+
+.displayBoard div {
+  border-radius: 32px;
+  font-size: 16px;
+  line-height: 20px;
+  height: 20px;
+  color: #000000;
+  text-align: center;
+  background-color: white;
+  border: 1px solid #ccc;
+  width: 100%;
+  
+}
+
